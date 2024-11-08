@@ -1,14 +1,16 @@
 import random
 
+
 def welcome_message():
     print("Welcome to Battle Ship")
-    print('There is a battleship hidden in this board.\n'
+    print("There's a hidden battleship somewhere on this board.\n"
           'Enter your row and column guesses to sink it!')
 
 
 # Create a square board based on dims value
 def build_board(dims):
     return [['O' for _ in range(dims)] for _ in range(dims)]
+
 
 def print_board(board):
     for row in board:
@@ -40,7 +42,7 @@ def user_guess():
 
 def update_board(guess, board, ship, guesses):
     if guess in guesses:
-        print('You already guessed that, silly!')
+        print('Oops! You’ve already guessed there! Trying to trick the ocean, are we?')
         return board
     guesses.add(guess)
     if guess in ship:
