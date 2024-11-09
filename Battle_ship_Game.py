@@ -78,5 +78,6 @@ def main():
         board = update_board(guess, board, ship, guesses)
     print("Congratulations! You've sunk the battleship!")
 
+
 if __name__ == "__main__":
     main()
