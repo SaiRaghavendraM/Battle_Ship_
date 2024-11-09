@@ -3,20 +3,24 @@ import random
 # Constants
 BOARD_SIZE = 4
 
+
 def welcome_message():
     """Prints the welcome message for the game."""
     print("Welcome to Battle Ship")
     print("There's a hidden battleship somewhere on this board.\n"
           "Enter your row and column guesses to sink it!")
 
+
 def build_board(dims):
     """Creates a square board based on the given dimensions."""
     return [['O' for _ in range(dims)] for _ in range(dims)]
+
 
 def print_board(board):
     """Prints the current state of the board."""
     for row in board:
         print(*row)
+
 
 def build_ship(dims):
     """Creates and returns ship positional coordinates."""
@@ -32,6 +36,7 @@ def build_ship(dims):
         coords = [(row, col) for row in range(row_start, row_start + len_ship)]
     return coords
 
+
 def user_guess(dims):
     """Prompts the user for a guess and returns it as a tuple."""
     while True:
@@ -44,6 +49,7 @@ def user_guess(dims):
                 print(f"Please enter numbers between 1 and {dims}.")
         except ValueError:
             print("Please enter valid integers for row and column.")
+
 
 def update_board(guess, board, ship, guesses):
     """Updates the board based on the user's guess."""
@@ -58,6 +64,7 @@ def update_board(guess, board, ship, guesses):
     else:
         print("LOL miss!")
     return board
+
 
 def main():
     """Main function to run the Battleship game."""
