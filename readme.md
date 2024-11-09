@@ -52,7 +52,7 @@ The game will let you know if you've hit or missed.
 
 ```
 Welcome to Battle Ship
-There is a battleship hidden in this board.
+There's a hidden battleship somewhere on this board.
 Enter your row and column guesses to sink it!
 
 O O O O
